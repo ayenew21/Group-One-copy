@@ -1,0 +1,32 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    position: sticky;
+    top: 0;
+}
+.header img{
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 80px;
+}
+.header__nav{
+    display: flex;
+    margin-right: 120px;
+}
+.header__nav h3{
+    margin-right: 25px;
+font-weight: 300;
+font-size: 18px;
+}
+h3.header__signin{
+    padding: 10px 0;
+    border-radius: 6px;
+    background: #516cf0;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    width: 200px;
+    color:white;
+    margin-top: 0;
+}

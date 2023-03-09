@@ -1,0 +1,30 @@
+.login{
+    margin-top: 40px;
+    /* background-color: gray; */
+    height: 400px;
+    text-align: center;
+}
+.login__form{
+    margin-left: 20px;
+}
+.login__input{
+    width: 300px;
+    height: 30px;
+    margin-bottom: 25px;
+    
+}
+.login__button{
+    width: 100px;
+    height: 30px;
+    background: #516cf0;
+    border: none;
+    color: white;
+    border-radius: 7px;
+    font-size: 16px;
+}
+.login__heading h3{
+    font-size: 20px;
+    /* font-weight: 800; */
+    padding-top: 10px;
+    /* color: #516cf0; */
+}
