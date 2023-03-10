@@ -57,34 +57,29 @@ function App() {
   return (
     <Router>
       <div>
+        <Header />
         <Routes>
           <Route
             path="/login"
             element={
-              <div>
-                <Header />
+              <div className="bg">              
                 <Login />
               </div>
             }
           />
-          <Route path="/signup" element={<SignUp />} />
-
+          <Route path="/signup" element={ 
+          <div className="bg">
+            <SignUp />
+            </div>} 
+              />
           <Route
             path="/question"
-            element={
-              <>
-                <Header />
-                <Question />
-              </>
+            element={  <Question />  
             }
           />
           <Route
             path="/answer"
-            element={
-              <>
-                <Header />
-                <Answer />
-              </>
+            element={<Answer /> 
             }
           />
           {/* <Route path="/question:id" element={<Answer postId = {id} />} /> */}

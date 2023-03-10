@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
+import"./SignUp.css"
 
 function SignUp() {
     const [form, setForm] = useState({});
@@ -35,46 +36,85 @@ function SignUp() {
             navigate("/");
         } catch (error) {
             console.log('problem ==>', error.response.data.msg);
+alert(error.response.data.msg)
+
         }
     }
   return (
     <div>
-            <h1>SignUp</h1>
-            <form onSubmit={handleSubmit}>
-                <label>First Name: </label>
-                <input
-                    type="text"
-                    name="firstName"
-                    onChange={handleChange}
-                /><br />
-                <label>Last Name: </label>
-                <input
-                    type="text"
-                    name="lastName"
-                    onChange={handleChange}
-                /><br />
-                <label>User Name: </label>
-                <input
-                    type="text"
-                    name="userName"
-                    onChange={handleChange}
-                /><br />
-                <label>Email: </label>
-                <input
-                    type="text"
-                    name="email"
-                    onChange={handleChange}
-                /><br />
-                <label>Password: </label>
-                <input
-                    type="password"
-                    name="password"
-                    onChange={handleChange}
-                /><br />
-                <button>submit</button>
-            </form>
-            <Link to="/login">Already have an account?</Link>
+    <div className='signup'>
+    <div className='signup__container'>
+      <div className='signup__title'>
+        <h2>Join the network</h2>
+        <p>Already have an account? <Link className='account__link'  to="/login">Sign in</Link></p>
+        
+        <form  className='signup__form' onSubmit={handleSubmit}>
+            <input type="email" name ="email" placeholder='Email' onChange={handleChange}/> <br />
+
+          <div className='signup__FLname'>
+            <input type="text" name ="firstName" placeholder='First Name' onChange={handleChange}/> <br /> 
+
+            <input id='lastname' type="text" name='lastName'  placeholder='Last Name'onChange={handleChange}/><br />
+            </div>
+
+            <input type="text" name='userName'  placeholder='User Name'onChange={handleChange}/><br />
+
+            <input type="password" name='password' placeholder='Password' onChange={handleChange}/><br />
+            <button>Agree and Join</button>
+        </form>
+        <p>I agree to the <a href="">privacy policy</a> and <a href="">terms of service</a></p>
+        <Link className='account__link' to = "/login">Already have an ccount?</Link>
         </div>
+
+    </div>
+ 
+        <div className="signup__about">
+          <p id='about'>About</p>
+      <h1>Evangadi Networks Q&A</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, molestias! Expedita ex nostrum officia harum quos numquam pariatur quas sequi nulla itaque molestias ullam fugit aut voluptatem at, laudantium reprehenderit.</p> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates porro quidem maxime in nostrum asperiores quos totam quia, molestias facere, consectetur dolores quod soluta aspernatur obcaecati, ipsam mollitia? Assumenda, fugiat?</p> <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis obcaecati corporis a reiciendis vitae repellat. Repellendus voluptatum et sapiente possimus, reiciendis, necessitatibus voluptas laudantium accusamus totam eligendi consectetur dolorem quae.
+      </p>
+
+      <button>HOW IT WORKS</button>
+      </div>
+      </div>
+
+      <div className="footer">
+            <div>
+            <img className="footer__image" src="https://www.evangadi.com/themes/humans//assets/images/misc/evangadi-logo-footer.png"
+        alt=""
+      />
+      <div className="footer_socialLink">
+      <span><a href="">facebook</a></span> 
+      <span className="footer__instagram"><a href="">insta</a></span> 
+      <span><a href="">youtube</a></span>
+      </div>
+      </div>
+
+<div className="footer__linkList">
+    <div className="footer__linkUseful">
+      <h3>Useful Link</h3>
+      <ul>
+        <li>How it works</li>
+        <li>Terms of Service</li>
+        <li>Privacy policy</li>
+      </ul>
+      </div>
+<div className="footer__linkContact">
+      <h3>Contact Info</h3>
+      <ul>
+        <li>Evangadi Networks</li>
+        <li>support@evangadi.com</li>
+        <li>+1-202-386-2702</li>
+      </ul>
+      </div>
+
+      </div>
+
+        </div>
+    
+    </div>
   )
 }
 

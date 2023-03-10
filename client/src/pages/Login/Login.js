@@ -46,39 +46,102 @@ function Login() {
   }, [userData.user, navigate]);
 
   return (
+    <div>
     <div className="login">
-      <div className="login__heading">
-        <h3>Login to your account</h3>
-        <p>
-          Don’t have an account?{" "}
-          <Link to={"/signup"}>Create a new account</Link>
-        </p>
-      </div>
-      <div className="login__form">
-        <form onSubmit={handleSubmit}>
-          {/* <label>Email: </label> */}
-          <input
-            className="login__input"
-            type="text"
-            name="email"
-            onChange={handleChange}
-            placeholder="Email"
-          />
-          <br />
-          {/* <label>Password: </label> */}
-          <input
-            className="login__input"
-            type="password"
-            name="password"
-            onChange={handleChange}
-            placeholder="password"
-          />
+      <div className="login__container">
+        <div className="login__title">
+          <h2>Login to your account</h2>
+          <p>
+            Don't have an account?{" "}
+            <Link className="account__link" to="/signup">
+              Create a new account
+            </Link>
+          </p>
 
-          <br />
-          <button className="login__button">submit</button>
-        </form>
+          <form className="login__form" onSubmit={handleSubmit}>
+            {/* <label>Email</label> */}
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              onChange={handleChange}
+            />{" "}
+            <br />
+            {/* <label>Password</label> */}
+            <input
+              type="password"
+              name="password"
+              placeholder="Your Password"
+              onChange={handleChange}
+            />
+            <br />
+            <button>Submit</button>
+          </form>
+          <Link className="account__link" to="/signup">
+            Create an Account?
+          </Link>
+        </div>
       </div>
-    </div>
+
+        <div className="login__about">
+          <p id="about">About</p>
+          <h1>Evangadi Networks Q&A</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
+            molestias! Expedita ex nostrum officia harum quos numquam pariatur
+            quas sequi nulla itaque molestias ullam fugit aut voluptatem at,
+            laudantium reprehenderit.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+            porro quidem maxime in nostrum asperiores quos totam quia, molestias
+            facere, consectetur dolores quod soluta aspernatur obcaecati, ipsam
+            mollitia? Assumenda, fugiat?
+          </p>{" "}
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
+            obcaecati corporis a reiciendis vitae repellat. Repellendus
+            voluptatum et sapiente possimus, reiciendis, necessitatibus voluptas
+            laudantium accusamus totam eligendi consectetur dolorem quae.
+          </p>
+          <button>HOW IT WORKS</button>
+        </div>
+            </div>
+
+        <div className="footer">
+            <div>
+            <img className="footer__image" src="https://www.evangadi.com/themes/humans//assets/images/misc/evangadi-logo-footer.png"
+        alt=""
+      />
+      <div className="footer_socialLink">
+      <span><a href="">facebook</a></span> 
+      <span className="footer__instagram"><a href="">insta</a></span> 
+      <span><a href="">youtube</a></span>
+      </div>
+      </div>
+
+<div className="footer__linkList">
+    <div className="footer__linkUseful">
+      <h3>Useful Link</h3>
+      <ul>
+        <li>How it works</li>
+        <li>Terms of Service</li>
+        <li>Privacy policy</li>
+      </ul>
+      </div>
+<div className="footer__linkContact">
+      <h3>Contact Info</h3>
+      <ul>
+        <li>Evangadi Networks</li>
+        <li>support@evangadi.com</li>
+        <li>+1-202-386-2702</li>
+      </ul>
+      </div>
+
+      </div>
+
+        </div>
+        </div>
   );
 }
 

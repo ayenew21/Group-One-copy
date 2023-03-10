@@ -1,17 +1,41 @@
-import React from 'react'
-import './Header.css'
-function Header() {
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { UserContext } from "../../context/UserContext";
+import "./Header.css";
+
+const Header = () => {
+  const [userData, setUserData] = useContext(UserContext);
+
+  // const handleAuthentication = () => {
+  //   if (userData) {
+  //     
+  //   }
+  // };
+
   return (
-    <div className='header'>
-<img className='header__img'
-src={`https://www.evangadi.com/themes/humans//assets/images/misc/evangadi-logo-home.png`} alt="Logo" />
-<div className='header__nav'>
-    <h3>Home</h3>
-    <h3>How it works</h3>
-    <h3 className='header__signin'>Sign IN</h3>
-</div>
+    <div className="nav">
+      <Link to="/">
+      <img
+        className="nav__image"
+        src="https://www.evangadi.com/themes/humans//assets/images/misc/evangadi-logo-home.png"
+        alt=""
+      />
+      </Link>
+
+        <Link to={!userData && "/login"} className="link">
+      <div className="nav__bar">
+        <span>Home</span>
+        <span className="nav__works">How it Works</span>
+          {/* <div onClick={handleAuthentication} className=""> */}
+            <button>{!userData ? "SIGN IN" : "LogOut"}</button>
+          {/* </div> */}
+      </div>
+        </Link>
+        
+
+
     </div>
-  )
-}
+  );
+};
 
 export default Header;

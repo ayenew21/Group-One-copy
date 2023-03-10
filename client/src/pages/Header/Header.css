@@ -1,32 +1,44 @@
-.header{
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-    position: sticky;
-    top: 0;
+.link {
+  text-decoration: none;
+  color: black;
 }
-.header img{
-    height: 35px;
-    margin-top: 10px;
-    margin-left: 80px;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
-.header__nav{
-    display: flex;
-    margin-right: 120px;
+
+.nav__image {
+  padding-left: 110px;
 }
-.header__nav h3{
-    margin-right: 25px;
-font-weight: 300;
-font-size: 18px;
+
+.nav__bar {
+  padding-right: 190px;
+  font-size: 19px;
 }
-h3.header__signin{
-    padding: 10px 0;
-    border-radius: 6px;
-    background: #516cf0;
-    font-weight: 600;
-    font-style: normal;
-    text-align: center;
-    width: 200px;
-    color:white;
-    margin-top: 0;
+.nav__bar span {
+    /* padding-bottom: 50px; */
+}
+.nav__bar button {
+  height: 45px;
+  width: 250px;
+  margin: 15px 0;
+  background-color: #516cf0;
+  border: 1px solid #3a59ef;
+  border-radius: 4px;
+  color: aliceblue;
+  font-size: 17px;
+}
+.nav__bar button:hover {
+  background: #db7405;
+  border: #fe8402;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+.nav__bar .nav__works {
+  padding: 35px;
+}
+.nav__bar :hover {
+  color: #da7000;
 }
