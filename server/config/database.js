@@ -1,16 +1,16 @@
-const mysql = require('mysql')
-// Pool manage multiple connections 
-var pool  = mysql.createPool({
-    connectionLimit : 10,
-    host            : process.env.DB_HOST,
-    user            : process.env.DB_USER,
-    password        : process.env.DB_PASS,
-    database        : process.env.MYDB
-  });
-  
-  pool.getConnection(function(err, connection) {
-      console.log('DB is Connected');
-  });
+const mysql = require("mysql");
+// Pool manage multiple connections
+var pool = mysql.createPool({
+  connectionLimit: 10,
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.MYDB,
+});
+
+pool.getConnection(function (err, connection) {
+  console.log("DB is Connected");
+});
 
 let registration = `CREATE TABLE if not exists registration(
     user_id int auto_increment,
@@ -41,7 +41,6 @@ let question = `CREATE TABLE if not exists question(
     FOREIGN KEY (user_id) REFERENCES registration(user_id)
 )`;
 
-
 let answer = `CREATE TABLE if not exists answer(
     answer_id int auto_increment,
     answer varchar(255) not null,
@@ -53,24 +52,24 @@ let answer = `CREATE TABLE if not exists answer(
     FOREIGN KEY (question_id) REFERENCES question(question_id)
 )`;
 
-pool.query(registration, (err, results)=>{
-    if (err) throw err;
-    console.log('registration table is created');
+pool.query(registration, (err, results) => {
+  if (err) throw err;
+  console.log("registration table is created");
 });
 
-pool.query(profile, (err, results)=>{
-    if (err) throw err;
-    console.log('profile table is created');
+pool.query(profile, (err, results) => {
+  if (err) throw err;
+  console.log("profile table is created");
 });
 
-pool.query(question, (err, results)=>{
-    if (err) throw err;
-    console.log('question table is created');
+pool.query(question, (err, results) => {
+  if (err) throw err;
+  console.log("question table is created");
 });
 
-pool.query(answer, (err, results)=>{
-    if (err) throw err;
-    console.log('answer table is created');
+pool.query(answer, (err, results) => {
+  if (err) throw err;
+  console.log("answer table is created");
 });
 
 module.exports = pool;
