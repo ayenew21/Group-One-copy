@@ -8,10 +8,10 @@
   border-radius: 6px;
   border-color: white;
   width: 120px;
-  height: 25px;
+  height: 35px;
   margin-right: 600px;
   margin-top: 24px;
-  font-size: 10px;
+  font-size: 13px;
 }
 .home__ask {
   display: flex;
@@ -32,8 +32,10 @@ h5 {
   padding-top: 25px;
   padding-left: 25px;
   padding-right: 10px;
+  width: 330px;
 }
 .home__questionsArrow {
   padding-top: 25px;
   margin-left: 685px;
 }
+

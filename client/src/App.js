@@ -57,29 +57,44 @@ function App() {
   return (
     <Router>
       <div>
-        <Header />
+
         <Routes>
           <Route
             path="/login"
             element={
-              <div className="bg">              
+              <div>
+                <Header />
+              <div className="bg"> 
                 <Login />
+              </div>
               </div>
             }
           />
           <Route path="/signup" element={ 
-          <div className="bg">
-            <SignUp />
-            </div>} 
+          <div>
+          <Header />
+        <div className="bg"> 
+          <SignUp />
+        </div>
+        </div>} 
               />
           <Route
             path="/question"
-            element={  <Question />  
+            element={
+              <div>
+                <Header logout={logout}/>
+                <Question />
+              </div>
+                  
             }
           />
           <Route
             path="/answer"
-            element={<Answer /> 
+            element={
+              <div>
+                <Header logout={logout}/>
+                <Answer />
+              </div>
             }
           />
           {/* <Route path="/question:id" element={<Answer postId = {id} />} /> */}
@@ -88,10 +103,11 @@ function App() {
           <Route
             path="/"
             element={
-              <>
-                <Header />
-                <Home logout={logout} />
-              </>
+              <div>
+                <Header logout={logout}/>
+                <Home />
+              </div>
+              
             }
           />
         </Routes>

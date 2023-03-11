@@ -41,9 +41,9 @@ function Login() {
     }
   };
 
-  useEffect(() => {
-    if (userData.user) navigate("/");
-  }, [userData.user, navigate]);
+  // useEffect(() => {
+  //   if (userData.user) navigate("/");
+  // }, [userData.user, navigate]);
 
   return (
     <div>

@@ -21,6 +21,7 @@ function Question() {
       question_description: form.descr,
       post_id: `questionPost${postId}`,
     });
+    console.log('hey');
     navigate("/");
   };
   return (
@@ -65,17 +66,18 @@ function Question() {
             }}
             name="descr"
             id=""
-            cols="100"
+            cols="110"
             rows="8"
             placeholder="Question description"
             onChange={handleChange}
           ></textarea>
+          <div className="question__button">
+        <button>Post your Question</button>
+      </div>
         </form>
       </div>
 
-      <div className="question__button">
-        <button>Post your Question</button>
-      </div>
+      
     </div>
   );
 }

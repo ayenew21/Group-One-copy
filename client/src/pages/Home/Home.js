@@ -39,7 +39,7 @@ function Home({ logout }) {
       <div className="home__ask">
         <button onClick={() => navigate("/question")}>Ask Question</button>
         {/* show username in homepage */}
-        <h4>WelCome: {userData.user?.display_name}</h4>
+        <h4>WelCome : {userData.user?.display_name}</h4>
       </div>
 
       <h5>Questions</h5>
@@ -63,10 +63,10 @@ function Home({ logout }) {
           </div>
         ))}
 
-      {/* logout when the button clicked in which the function comes from app.js */}
-      <div className="home__question">
-        <button onClick={logout}>Log out</button>
-      </div>
+      {/* logout when the button clicked in which the function comes from app.js
+      <div>
+        <button className="home__button" onClick={logout}>Log out</button>
+      </div> */}
     </div>
   );
 }

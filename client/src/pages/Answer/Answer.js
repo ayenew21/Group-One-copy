@@ -20,10 +20,8 @@ function Answer() {
           post_id: userData.singleQuestion.post_id,
         }
       );
-      console.log(response);
-      setPost({
-        question: response.data.data,
-      });
+      // console.log(response);
+      setPost(response.data.data);
     };
     fetch();
   }, []);
@@ -39,6 +37,7 @@ function Answer() {
     get();
   }, [answer.length]);
 
+  console.log(post);
   const handleChange = (e) => {
     setForm({ [e.target.name]: e.target.value });
   };
@@ -48,24 +47,34 @@ function Answer() {
     await axios.post(`http://localhost:5000/api/answers`, {
       answer: form.answer,
       user_id: userData.user.id,
-      question_id: post.question.question_id,
+      question_id: post.question_id,
     });
-    setAnswer([]);
+    if(answer.length == 0) {
+      setAnswer(['']);
+    }
+    else {
+      setAnswer([]);
+    }
+    
     setForm({ answer: "" });
   };
   console.log(answer);
   console.log(post);
-  if (answer.length == 0) {
-    navigate("/");
-  }
+
+  // if (performance.navigation.type === 1) {
+  //   // page was just refreshed:
+  //   window.location.href = '/';
+  // }  
+
+  // if(answer.length == 0) navigate('/');
   return (
     <div className="answer">
       <h3 style={{ fontSize: "18px", fontWeight: "500" }}>Question</h3>
       <h5 style={{ marginTop: "-15px", fontSize: "15px" }}>
-        {post?.question?.question}
+        {post?.question}
       </h5>
       <p style={{ marginTop: "-15px", fontSize: "12px" }}>
-        {post?.question?.question_description}
+        {post?.question_description}
       </p>
       <hr />
       <h3>Answer From The Community</h3>

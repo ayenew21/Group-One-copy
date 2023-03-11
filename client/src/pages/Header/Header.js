@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 import "./Header.css";
 
-const Header = () => {
+const Header = ({logout}) => {
   const [userData, setUserData] = useContext(UserContext);
 
   // const handleAuthentication = () => {
@@ -22,12 +22,13 @@ const Header = () => {
       />
       </Link>
 
-        <Link to={!userData && "/login"} className="link">
+        <Link to={!userData.user && "/login"} className="link">
       <div className="nav__bar">
         <span>Home</span>
         <span className="nav__works">How it Works</span>
           {/* <div onClick={handleAuthentication} className=""> */}
-            <button>{!userData ? "SIGN IN" : "LogOut"}</button>
+          {userData.user ? <button onClick={logout}>LogOut</button>: <button>SignIn</button>}
+            
           {/* </div> */}
       </div>
         </Link>
