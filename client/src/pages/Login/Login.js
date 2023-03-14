@@ -36,7 +36,7 @@ function Login() {
       navigate("/");
     } catch (err) {
       // if the email isnot reegistered in the database the backend respond 404 with message so to show that message to the frontend we use the path err.response.data.msg
-      console.log("problem", err.response.data.msg);
+      // console.log("problem", err.response.data.msg);
       alert(err.response.data.msg);
     }
   };
