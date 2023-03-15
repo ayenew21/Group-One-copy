@@ -1,6 +1,8 @@
 const mysql = require("mysql");
 // Pool manage multiple connections
 var pool = mysql.createPool({
+  socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock",
+
   connectionLimit: 10,
   host: process.env.DB_HOST,
   user: process.env.DB_USER,

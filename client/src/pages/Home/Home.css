@@ -1,4 +1,4 @@
-.home {
+/* .home {
   padding-left: 180px;
   padding-right: 120px;
 }
@@ -37,5 +37,49 @@ h5 {
 .home__questionsArrow {
   padding-top: 25px;
   margin-left: 685px;
+}
+ */
+
+.home__qbtn button{
+    background-color: blue;
+    border-radius: 7px;
+    border: none;
+    width: 150px;
+}
+.home__container {
+    width: 100%; 
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.home__top{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 120px;
+
+}
+.home__qbtn button a {
+    text-decoration-line: none;
+}
+.logoutBtn{
+align-items: center;
+margin: auto;
+background-color: blue;
+border-radius: 7px;
+color: white;
+width: 150px;
+}
+
+
+.home__questions {
+  display: flex;
+}
+.home__question {
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 10px;
+  width: 330px;
+}
+.home__questionsArrow {
+margin-left: 65%;
 }
 

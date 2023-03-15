@@ -9,6 +9,7 @@ import Home from "./pages/Home/Home";
 import Question from "./pages/Ask/Question";
 import Answer from "./pages/Answer/Answer";
 import Header from "./pages/Header/Header";
+import Footer from "./pages/Footer/Footer";
 
 function App() {
   const [userData, setUserData] = useContext(UserContext);
@@ -65,7 +66,8 @@ function App() {
               <div>
                 <Header />
               <div className="bg"> 
-                <Login />
+                  <Login />
+                  <Footer/>
               </div>
               </div>
             }
@@ -74,7 +76,8 @@ function App() {
           <div>
           <Header />
         <div className="bg"> 
-          <SignUp />
+                <SignUp />
+                <Footer/>
         </div>
         </div>} 
               />

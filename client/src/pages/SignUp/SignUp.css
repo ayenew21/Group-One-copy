@@ -1,76 +1,111 @@
-.signup {
+body {
+  font: 1.6rem helvetica;
+  /* box-sizing: border-box; */
+  background-color: #f0f2f5;
+}
+.row {
+  background-image: url("https://www.evangadi.com/themes/humans/assets/images/misc/bg-svg-f.svg");
+  width: 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.signin {
+  padding: 30px;
+  margin: 10px;
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  /* border-radius: 1rem ; */
+  align-items: center;
+  /* flex-wrap: wrap; */
+  /* justify-content: space-evenly; */
+}
+.signinContainer {
+  border: white 0.3rem solid;
+  background-color: white;
+  width: 26rem;
+  padding: 1rem;
+  border-radius: 0.7rem;
+}
+input {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  /* box-sizing: border-box; */
+}
+
+.password {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  /* box-sizing: border-box; */
+  /* box-sizing: content-box; */
+}
+
+.flex {
   display: flex;
 }
-.signup__container {
-  margin-left: 395px;
+.flex input {
+  margin: 2px;
+}
 
+h5 {
   text-align: center;
-  padding-top: 10px;
-}
-.signup__title {
-  width: 530px;
-  height: 600px;
-  margin-top: 50px;
-  background-color: #fff;
-  box-shadow: 0 4px 12px rgb(158 158 158 / 90%);
-  border-radius: 10px;
-  position: relative;
-  top: 0;
 }
 
-.signup__title h2 {
-  padding-top: 60px;
+.already {
+  text-align: center;
+  font-size: 15px;
+  justify-content: center;
 }
 
-p a {
-  color: #db7202;
+.btn {
+  width: 100%;
+  background-color: #1877f2;
+  border: none;
+
+  padding: 15px 32px;
+
+  margin: 2px 4px;
+
+  color: white;
 }
-.signup__form input {
-  height: 40px;
-  margin-bottom: 9px;
-  width: 450px;
-  border: 1.9px solid #ddd;
-  border-radius: 6px;
+.about .text {
+  color: #da7000;
 }
 
-.signup__FLname {
-  display: flex;
-  padding: 0 35px;
+.aboutbtn {
+  background-color: #da7000;
+  border: none;
+  padding: 15px 32px;
+  border-radius: 0.5rem;
+  color: rgb(159, 68, 68);
 }
-#lastname {
-  margin-left: 7px;
+/* .forget a{
+    /* color: #1877F2; */
+/* align-items: center; */
+/* justify-content: center; */
+/* display: flex; */
+/* font-size: 1rem; */
+
+.page {
+  font-size: 1rem;
 }
-.signup__container button {
-  height: 45px;
-  width: 455px;
-  margin: 20px 0;
-  background-color: #516cf0;
-  border: 1px solid #3a59ef;
-  border-radius: 4px;
-  color: aliceblue;
-  font-size: 18px;
+.page p {
+  text-align: center;
 }
 
-.signup__container button:hover {
-  background: #f17f04;
-  border: #fe8402;
-  cursor: pointer;
+a,
+a:hover,
+a:focus {
+  color: #da7000;
 }
 
-.signup__about {
-  padding-top: 150px;
-  width: 600px;
-  padding-left: 40px;
+.lorem {
+  font-size: medium;
 }
-#about {
-  color: #f88409;
-}
-.signup__about button {
-  background: #f17f04;
-  border: 1px solid #fe8402;
-  border-radius: 4px;
-  padding: 12px;
-  color: #fff;
-  width: 190px;
-  margin-top: 20px;
+
+.about {
+  margin-top: 120px;
+  text-align: justify;
 }

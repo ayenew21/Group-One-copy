@@ -1,0 +1,34 @@
+.footer{
+ width: 100%;
+background-color: #38485a; 
+color: white;
+padding-bottom: 20px;
+}
+.footer__logo > img{
+    width: 100px;
+}
+.footer{
+    /* display: flex; */
+    justify-content: space-evenly;
+    padding-top: 20px;
+    margin-bottom: 0;
+}
+.footer__socialMedias{
+    width: 100px;
+    display: flex; 
+    justify-content: space-between;
+
+}
+
+.footer__info  {
+   font-weight: bold;
+   font-family: "Lato", sans-serif;
+}
+.footer__infoText{
+    font-size: 10px;
+    padding-top: 5px;
+    
+}
+ a {
+   color: white;
+}
