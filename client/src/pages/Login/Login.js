@@ -58,77 +58,11 @@ function Login() {
     }
   };
 
-  // useEffect(() => {
-  //   if (userData.user) navigate("/");
-  // }, [userData.user, navigate]);
-
   return (
-    // <div>
-    // <div className="login">
-    //   <div className="login__container">
-    //     <div className="login__title">
-    //       <h2>Login to your account</h2>
-    //       <p>
-    //         Don't have an account?{" "}
-    //         <Link className="account__link" to="/signup">
-    //           Create a new account
-    //         </Link>
-    //       </p>
-
-    //       <form className="login__form" onSubmit={handleSubmit}>
-    //         {/* <label>Email</label> */}
-    //         <input
-    //           type="email"
-    //           name="email"
-    //           placeholder="Your Email"
-    //           onChange={handleChange}
-    //         />{" "}
-    //         <br />
-    //         {/* <label>Password</label> */}
-    //         <input
-    //           type="password"
-    //           name="password"
-    //           placeholder="Your Password"
-    //           onChange={handleChange}
-    //         />
-    //         <br />
-    //         <button>Submit</button>
-    //       </form>
-    //       <Link className="account__link" to="/signup">
-    //         Create an Account?
-    //       </Link>
-    //     </div>
-    //   </div>
-
-    //     <div className="login__about">
-    //       <p id="about">About</p>
-    //       <h1>Evangadi Networks Q&A</h1>
-    //       <p>
-    //         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
-    //         molestias! Expedita ex nostrum officia harum quos numquam pariatur
-    //         quas sequi nulla itaque molestias ullam fugit aut voluptatem at,
-    //         laudantium reprehenderit.
-    //       </p>
-    //       <p>
-    //         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-    //         porro quidem maxime in nostrum asperiores quos totam quia, molestias
-    //         facere, consectetur dolores quod soluta aspernatur obcaecati, ipsam
-    //         mollitia? Assumenda, fugiat?
-    //       </p>{" "}
-    //       <p>
-    //         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
-    //         obcaecati corporis a reiciendis vitae repellat. Repellendus
-    //         voluptatum et sapiente possimus, reiciendis, necessitatibus voluptas
-    //         laudantium accusamus totam eligendi consectetur dolorem quae.
-    //       </p>
-    //       <button>HOW IT WORKS</button>
-    //     </div>
-    //         </div>
-
-    //     </div>
+   
     <>
       <div
-        id="home"
+        id="login__home"
         className="login d-lg-flex d-md-flex d-sm-block d-xs-block "
       >
         <div className="container mx-xs-5">
@@ -143,7 +77,7 @@ function Login() {
             <form onSubmit={handleSubmit}>
               {/* <label>Email: </label> */}
               <input
-                className="login__input"
+                className="login__input "
                 type="text"
                 name="email"
                 onChange={handleChange}
@@ -157,9 +91,9 @@ function Login() {
                   type={type}
                   name="password"
                   onChange={handleChange}
-                  placeholder="password"
+                  placeholder="Password"
                 />
-                <span className="eye mt-4">
+                <span className="eye mt-3">
                   <IconButton onClick={handleToogle}>
                     {visibility ? <VisibilityIcon /> : <VisibilityOffIcon />}
                   </IconButton>
@@ -167,20 +101,21 @@ function Login() {
               </div>
               <br />
               <button className="login__button">Submit</button>
-              <p className="login__account mb-5">
+              <p className="login__account ">
                 <Link to="/signup"> Create a new account</Link>
               </p>
             </form>
           </div>
         </div>
-        <div className="login__about  mx-xs-5 mb-sm-5 mx-md-1">
+        <div className="login__about  m-xs-5 mb-sm-5  mx-sm-5">
           {/* <About /> */}
-          <div className="about ">
-            <p className="about__about">About</p>
+          
+            <p className="login__about_about">About</p>
             <div about__title>
               <h1>Evangadi Networks Q&A</h1>
-            </div>
-            <p>
+            </div >
+            <div className="login__para">
+            <p >
               No matter what stage of life you are in, whether you’re just
               starting elementary school or being promoted to CEO of a Fortune
               500 company, you have much to offer to those who are trying to
@@ -190,10 +125,11 @@ function Login() {
               Wheather you are willing to share your knowledge or you are just
               looking to meet mentors of your own, please start by joining the
               network here.
-            </p>
+              </p>
+              </div>
 
             <button>HOW IT WORKS</button>
-          </div>
+        
         </div>
       </div>
     </>

@@ -47,19 +47,20 @@
    
 }
 .header__logo > img{
-    width: 125px;
-   
+    width: 150px;
+   padding-top: 20px;
     margin-left: 65px;
 }
 .header_container{
     display: flex;
-    padding-top: 15px;
+    
    justify-content: space-around;
-   font-size: 14px;
-   padding-bottom: 15px;
+   font-size: 20px;
+   /* padding-top: 15px; */
 }
 .header__titles {
     display: flex;
+    padding-top: 20px;
    
 }
 .header__home {
@@ -70,14 +71,15 @@
     color: black;
 }
 .header__titles > button {
-    width: 120px;
+    width: 150px;
     background-color: blue;
     text-decoration-line: none;
     border-radius: 7px;
     color: white;
-    font-size: 14px;
+    font-size: 20px;
     border: none;
-    height: 25px;
+    height: 35px;
+  
    
     
 }

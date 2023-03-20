@@ -116,12 +116,12 @@
 } */
 
 
-#home {
+#login__home {
   background-image: url("https://www.evangadi.com/themes/humans/assets/images/misc/bg-svg-f.svg");
   background-size: cover;
   background-color: #f8f8f8;
   width: 100%;
-  margin: 0;
+  
 }
 
 .login__form {
@@ -129,13 +129,16 @@
 
 }
 .login__input {
-  width: 80%;
-  height: 40px;
+  width: 90%;
+  height: 45px;
   margin-bottom: 15px;
+  border-radius: 7px;
+  border-color: #cccccc;
+  font-size: 14px;
 }
 .login__button {
-  width: 80%;
-  height: 40px;
+  width: 90%;
+  height: 45px;
   background: #516cf0;
   border: none;
   color: white;
@@ -154,9 +157,10 @@
   text-align: center;
 font-size: 12px;
 }
-/* .login__account  {
-  font-size: 12px;
-} */
+.login__account  {
+  margin-bottom: 35px;
+  padding-bottom: 10px;
+}
 .login,
 .container {
   text-align: center;
@@ -164,20 +168,18 @@ font-size: 12px;
   background-color: white;
   border: 1px solid lightgray;
   box-shadow: 0 6px 18px -3px rgba(0, 0, 0, 0.75);
-  
-  /* height: 75%; */
-  /* margin-left: 200px; */
   box-shadow: 1px;
   width: 100%;
   padding: 10px;
   
 }
 .container {
-  margin-left: 25%;
+  margin-left: 10%;
+  margin-right: 30px;
   width: 75%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-bottom:15%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom:5%;
 
 }
 /* .eye {
@@ -187,30 +189,37 @@ font-size: 12px;
 /* about section */
 
 .login__about {
-  /* width: 55%; */
-  margin-left: 75px;
-  /* margin-top: 0px */
+  width: 100%;
+  /* margin-right: 35px; */
+  margin-top: 85px;
   text-align: left;
 }
-.about {
-   margin-right:45%;
-   margin-left: 55px;
-   width: 75%;
+.login__about {
+   margin-right:10%;
+   /* margin-left: 55px; */
+   width: 100%;
    /* margin-bottom: 100px; */
 }
 .login__about button {
   background-color: #fe8303;
+  font-size: 14px;
   border: none;
+  padding: 5px;
+  width: 145px;
   border-radius: 7px;
  
 }
-.about__about {
+.login__about_about {
   color: #fe8303;
   font-size: 12px;
+}
+.login__para{
+  font-size: 16px;
 }
 .login__account a {
   text-align: center;
   color: #fe8303;
+  
   font-family: "Lato", sans-serif;
   font-size: 15px;
 }
